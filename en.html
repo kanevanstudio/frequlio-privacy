@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="index.html" lang="zh-Hant-TW">繁體中文</a></p>
 <h1>Frequlio Privacy Policy</h1>
-<p class="meta">Effective date: November 17, 2026<br>
+<p class="meta">Effective date: November 19, 2026<br>
 Applies to: the Android app “Frequlio” (package name <code>com.frequlio.wifitools</code>)<br>
 Developer: KaneVan Studio</p>
 
@@ -33,7 +33,7 @@ Developer: KaneVan Studio</p>
 
 <h3>Diagnostic targets you enter, and the results</h3>
 <p>When you run a TCP connection test, a DNS lookup or an HTTP/HTTPS diagnosis, the host name, IP address or URL you enter and the measured results (such as resolved IP addresses, timings, HTTP status code and the time of the test) are saved as a diagnostic record in the app’s database on your device.</p>
-<p>For HTTP/HTTPS, the query string (the part of the URL after <code>?</code>) is removed before the URL is saved. Raw error messages reported by the system are not saved.</p>
+<p>For HTTP/HTTPS, only the scheme, host and port of the URL are saved; the path and the query string (the part after <code>?</code>) are removed, because either may contain tokens. Raw error messages reported by the system are not saved.</p>
 
 <h3>App settings</h3>
 <p>Your chosen theme mode (follow system, light or dark) and app language (follow system, Traditional Chinese or English) are stored on the device.</p>
@@ -64,6 +64,7 @@ Developer: KaneVan Studio</p>
 <h2>5. Data sharing</h2>
 <p>The developer does not receive your data, and therefore does not sell, share or disclose it to any third party.</p>
 <p>The app lets you export diagnostic records to a CSV or TXT file. An export happens only when you start it, and the file is saved to the location you choose in the system file picker. Exported files are yours to manage. Deleting records inside the app does not delete files you have already exported.</p>
+<p>When you tap "Copy" or "Share", that diagnostic result is copied to the clipboard as text, or handed as text to the app you pick in the system share sheet. What happens next depends on the app you pick.</p>
 
 <h2>6. Third-party components</h2>
 <p>The app uses open-source libraries for its interface, network connections and local storage (the list is available in the app under Settings → Open-source licenses). These libraries run on your device and do not collect your data for their developers.</p>
