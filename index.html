@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="en.html" lang="en">English</a></p>
 <h1>Frequlio 隱私權政策</h1>
-<p class="meta">生效日期：2026 年 11 月 19 日<br>
+<p class="meta">生效日期：2026 年 11 月 20 日<br>
 適用範圍：Android App「Frequlio」（套件名稱 <code>com.frequlio.wifitools</code>）<br>
 開發者：KaneVan Studio</p>
 
@@ -33,6 +33,7 @@
 
 <h3>你輸入的診斷目標與診斷結果</h3>
 <p>執行 TCP 連線測試、DNS 查詢或 HTTP/HTTPS 診斷時，你輸入的主機名稱、IP 位址或網址，以及測得的結果（例如解析到的 IP 位址、耗時、HTTP 狀態碼、時間），會存成一筆診斷紀錄，保存在你裝置上的 App 資料庫。</p>
+<p>執行一鍵完整診斷時，每一步的結果（例如通過或失敗、耗時中位數、HTTP 狀態碼）與你的路由器（預設閘道）的區網 IP 位址，同樣會存成一筆診斷紀錄。</p>
 <p>HTTP/HTTPS 的網址只保存協定、主機與連接埠；路徑與查詢參數（網址中 <code>?</code> 之後的部分）都會去除，因為兩者都可能含有權杖（Token）。系統回報的原始錯誤訊息不會保存。</p>
 
 <h3>App 設定</h3>
@@ -49,8 +50,9 @@
 <li>TCP 連線測試：與你輸入的主機及連接埠建立 TCP 連線，隨即關閉。</li>
 <li>DNS 查詢：透過 Android 系統，向你目前網路設定的 DNS 伺服器查詢你輸入的網域。</li>
 <li>HTTP/HTTPS 診斷：對你輸入的網址送出一次 HTTP 請求，讀取回應狀態，不下載內容，也不跟隨重新導向。</li>
+<li>一鍵完整診斷：先與你的路由器（預設閘道）建立 TCP 連線，再連到 Google 的固定測試目標：與 <code>8.8.8.8</code> 建立 TCP 連線、透過系統 DNS 查詢 <code>connectivitycheck.gstatic.com</code>，並對 <code>https://connectivitycheck.gstatic.com/generate_204</code> 送出一次 HTTPS 請求。Google 會因此看到你的 IP 位址；它如何處理這些資訊，依 Google 的隱私權政策而定。</li>
 </ul>
-<p>這些請求的對象是你指定的目標，以及你的網路所使用的 DNS 服務。如同任何網路連線，目標服務、你的網路業者或中間的網路設備，可能因此得知你的 IP 位址等連線資訊；它們如何處理這些資訊，依各自的政策而定，不在本 App 的控制範圍內。</p>
+<p>這些請求的對象是你指定的目標、一鍵完整診斷的固定目標，以及你的網路所使用的 DNS 服務。如同任何網路連線，目標服務、你的網路業者或中間的網路設備，可能因此得知你的 IP 位址等連線資訊；它們如何處理這些資訊，依各自的政策而定，不在本 App 的控制範圍內。</p>
 <p>除了你主動執行的診斷之外，App 不會自行連線到任何伺服器。</p>
 
 <h2>4. 資料保存在哪裡、保存多久</h2>

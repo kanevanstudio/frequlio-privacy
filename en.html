@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="index.html" lang="zh-Hant-TW">繁體中文</a></p>
 <h1>Frequlio Privacy Policy</h1>
-<p class="meta">Effective date: November 19, 2026<br>
+<p class="meta">Effective date: November 20, 2026<br>
 Applies to: the Android app “Frequlio” (package name <code>com.frequlio.wifitools</code>)<br>
 Developer: KaneVan Studio</p>
 
@@ -33,6 +33,7 @@ Developer: KaneVan Studio</p>
 
 <h3>Diagnostic targets you enter, and the results</h3>
 <p>When you run a TCP connection test, a DNS lookup or an HTTP/HTTPS diagnosis, the host name, IP address or URL you enter and the measured results (such as resolved IP addresses, timings, HTTP status code and the time of the test) are saved as a diagnostic record in the app’s database on your device.</p>
+<p>When you run a one-tap diagnosis, the result of each step (such as passed or failed, median timings and the HTTP status code) and the local IP address of your router (default gateway) are also saved as a diagnostic record.</p>
 <p>For HTTP/HTTPS, only the scheme, host and port of the URL are saved; the path and the query string (the part after <code>?</code>) are removed, because either may contain tokens. Raw error messages reported by the system are not saved.</p>
 
 <h3>App settings</h3>
@@ -49,8 +50,9 @@ Developer: KaneVan Studio</p>
 <li>TCP connection test: opens a TCP connection to the host and port you enter, then closes it.</li>
 <li>DNS lookup: asks, through the Android system, the DNS servers configured for your current network to resolve the domain you enter.</li>
 <li>HTTP/HTTPS diagnosis: sends one HTTP request to the URL you enter and reads the response status. It does not download the content and does not follow redirects.</li>
+<li>One-tap diagnosis: opens TCP connections to your router (default gateway), then contacts fixed Google test targets: a TCP connection to <code>8.8.8.8</code>, a lookup of <code>connectivitycheck.gstatic.com</code> through the system DNS, and one HTTPS request to <code>https://connectivitycheck.gstatic.com/generate_204</code>. Google can therefore see your IP address; how it handles that information is governed by Google’s privacy policy.</li>
 </ul>
-<p>These requests go to the target you specify and to the DNS service your network uses. As with any network connection, the target service, your network operator or equipment along the path may learn connection information such as your IP address. How they handle it is governed by their own policies and is outside this app’s control.</p>
+<p>These requests go to the target you specify, to the fixed targets of the one-tap diagnosis, and to the DNS service your network uses. As with any network connection, the target service, your network operator or equipment along the path may learn connection information such as your IP address. How they handle it is governed by their own policies and is outside this app’s control.</p>
 <p>Apart from diagnostics that you start, the app does not connect to any server on its own.</p>
 
 <h2>4. Where data is stored and for how long</h2>
