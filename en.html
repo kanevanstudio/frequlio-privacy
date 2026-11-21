@@ -32,7 +32,7 @@ Developer: KaneVan Studio</p>
 <p>The home screen shows details that Android provides about your current network: connection type, the system’s connectivity validation status, IP addresses, DNS servers, default gateway, network interface name, search domains and MTU. These are only shown on screen. They are not saved or transmitted.</p>
 
 <h3>Diagnostic targets you enter, and the results</h3>
-<p>When you run a ping, a traceroute, a TCP connection test, a DNS lookup or an HTTP/HTTPS diagnosis, the host name, IP address or URL you enter and the measured results (such as resolved IP addresses, timings, HTTP status code and the time of the test), together with the type of network tested (Wi-Fi, mobile data, or that it followed the system; the Wi-Fi name is not saved), are saved as a diagnostic record in the app’s database on your device.</p>
+<p>When you run a ping, a traceroute, a TCP connection test, a DNS lookup or an HTTP/HTTPS diagnosis, the host name, IP address or URL you enter and the measured results (such as resolved IP addresses, timings, HTTP status code and the time of the test), together with the type of network tested (Wi-Fi, mobile data, or that it followed the system; the Wi-Fi name is not saved), are saved as a diagnostic record in the app’s database on your device. Continuous Monitor saves a summary only when you tap Save summary after stopping it: the statistics for each target (attempts and successes, failure reasons, and min/avg/max timings), not the second-by-second results.</p>
 <p>When you run a one-tap diagnosis, the result of each step (such as passed or failed, median timings and the HTTP status code) and the local IP address of your router (default gateway) are also saved as a diagnostic record.</p>
 <p>For HTTP/HTTPS, only the scheme, host and port of the URL are saved; the path and the query string (the part after <code>?</code>) are removed, because either may contain tokens. Raw error messages reported by the system are not saved.</p>
 
@@ -48,6 +48,7 @@ Developer: KaneVan Studio</p>
 <p>The app makes network requests only when you run a diagnostic yourself:</p>
 <ul>
 <li>Ping: sends ICMP echo request packets to the host or IP address you enter and waits for replies.</li>
+<li>Continuous Monitor: for each target you add (up to 5), sends one ICMP echo packet or makes one TCP connection every second until you stop it, for up to 30 minutes. It runs only while the app is open and this screen is shown.</li>
 <li>Traceroute: sends ICMP echo packets with an increasing time-to-live (TTL) to the target you enter; each router along the path may see them and report back. The record keeps the addresses of the routers that reported. On Android 11 and earlier, the same packets are sent through the system’s built-in ping command.</li>
 <li>TCP connection test: opens a TCP connection to the host and port you enter, then closes it.</li>
 <li>DNS lookup: asks, through the Android system, the DNS servers configured for your current network to resolve the domain you enter.</li>
