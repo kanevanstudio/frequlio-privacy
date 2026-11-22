@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="index.html" lang="zh-Hant-TW">繁體中文</a></p>
 <h1>Frequlio Privacy Policy</h1>
-<p class="meta">Effective date: November 21, 2026<br>
+<p class="meta">Effective date: November 22, 2026<br>
 Applies to: the Android app “Frequlio” (package name <code>com.frequlio.wifitools</code>)<br>
 Developer: KaneVan Studio</p>
 
@@ -51,7 +51,7 @@ Developer: KaneVan Studio</p>
 <li>Continuous Monitor: for each target you add (up to 5), sends one ICMP echo packet or makes one TCP connection every second until you stop it, for up to 30 minutes. It runs only while the app is open and this screen is shown.</li>
 <li>Traceroute: sends ICMP echo packets with an increasing time-to-live (TTL) to the target you enter; each router along the path may see them and report back. The record keeps the addresses of the routers that reported. On Android 11 and earlier, the same packets are sent through the system’s built-in ping command.</li>
 <li>TCP connection test: opens a TCP connection to the host and port you enter, then closes it.</li>
-<li>DNS lookup: asks, through the Android system, the DNS servers configured for your current network to resolve the domain you enter.</li>
+<li>DNS lookup: asks, through the Android system, the DNS servers configured for your current network to resolve the domain you enter (on Android 10 or later, it can also look up record types such as MX and TXT, or look up the name for an IP address).</li>
 <li>HTTP/HTTPS diagnosis: sends one HTTP request to the URL you enter and reads the response status. It does not download the content and does not follow redirects.</li>
 <li>One-tap diagnosis: opens TCP connections to your router (default gateway), then contacts fixed Google test targets: a TCP connection to <code>8.8.8.8</code>, a lookup of <code>connectivitycheck.gstatic.com</code> through the system DNS, and one HTTPS request to <code>https://connectivitycheck.gstatic.com/generate_204</code>. Google can therefore see your IP address; how it handles that information is governed by Google’s privacy policy.</li>
 </ul>
