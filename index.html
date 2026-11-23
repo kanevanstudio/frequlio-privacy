@@ -53,10 +53,11 @@
 <li>TCP 連線測試：與你輸入的主機及連接埠建立 TCP 連線，隨即關閉。</li>
 <li>DNS 查詢：透過 Android 系統，向你目前網路設定的 DNS 伺服器查詢你輸入的網域（Android 10 以上也可查 MX、TXT 等記錄類型，或以 IP 位址反查名稱）。</li>
 <li>與 Google 公共 DNS 比較：只有你在 DNS 查詢結果下方按下「與 Google 公共 DNS 比較」時，才會以 DNS-over-HTTPS 把剛才查詢的名稱與記錄類型送到 Google Public DNS（dns.google）。Google 會收到這些內容，也看得到你的連線 IP；依 Google Public DNS 的隱私權說明，含 IP 的暫存紀錄通常在 24 至 48 小時內進入刪除流程，處理安全或濫用事件時可能保留更久，另有移除 IP 的抽樣永久紀錄。比較結果只顯示在畫面上，不存入歷史紀錄。已知的本機及內部名稱（例如 .local、私有 IP 的反查）不會送出。</li>
+<li>全球 Ping：只有你在「全球 Ping」按下「開始測試」時，才會把你輸入的目標（網域或 IP 位址）與所選地區送到 Globalping（<code>api.globalping.io</code>），由該地區的 Globalping 節點對目標送出 ICMP Ping，測試不是從你的裝置發出。Globalping 看得到你的連線 IP，也會依你的 IP 計算測試額度。<strong>依 Globalping 的條款，測試目標與結果是公開的：任何取得測試編號的人都能查看，Globalping 也可能發布、收錄或分析這些資料，他人轉存的副本無法刪除。</strong>請勿輸入內部或機密主機名稱；已知的本機及內部名稱與私有 IP 位址不會送出。結果只顯示在畫面上，Frequlio 不存入歷史紀錄。Globalping 如何處理這些資訊，依其條款與隱私權政策而定（<a href="https://globalping.io/terms">globalping.io/terms</a>）。</li>
 <li>HTTP/HTTPS 診斷：對你輸入的網址送出一次 HTTP 請求，讀取回應狀態，不下載內容，也不跟隨重新導向。</li>
 <li>一鍵完整診斷：先與你的路由器（預設閘道）建立 TCP 連線，再連到 Google 的固定測試目標：與 <code>8.8.8.8</code> 建立 TCP 連線、透過系統 DNS 查詢 <code>connectivitycheck.gstatic.com</code>，並對 <code>https://connectivitycheck.gstatic.com/generate_204</code> 送出一次 HTTPS 請求。Google 會因此看到你的 IP 位址；它如何處理這些資訊，依 Google 的隱私權政策而定。</li>
 </ul>
-<p>這些請求的對象是你指定的目標、一鍵完整診斷的固定目標、你的網路所使用的 DNS 服務，以及你選擇比較時的 Google Public DNS。如同任何網路連線，目標服務、你的網路業者或中間的網路設備，可能因此得知你的 IP 位址等連線資訊；它們如何處理這些資訊，依各自的政策而定，不在本 App 的控制範圍內。</p>
+<p>這些請求的對象是你指定的目標、一鍵完整診斷的固定目標、你的網路所使用的 DNS 服務，你選擇比較時的 Google Public DNS，以及你使用全球 Ping 時的 Globalping。如同任何網路連線，目標服務、你的網路業者或中間的網路設備，可能因此得知你的 IP 位址等連線資訊；它們如何處理這些資訊，依各自的政策而定，不在本 App 的控制範圍內。</p>
 <p>除了你主動執行的診斷之外，App 不會自行連線到任何伺服器。</p>
 
 <h2>4. 資料保存在哪裡、保存多久</h2>
