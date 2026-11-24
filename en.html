@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="index.html" lang="zh-Hant-TW">繁體中文</a></p>
 <h1>Frequlio Privacy Policy</h1>
-<p class="meta">Effective date: November 23, 2026<br>
+<p class="meta">Effective date: November 24, 2026<br>
 Applies to: the Android app “Frequlio” (package name <code>com.frequlio.wifitools</code>)<br>
 Developer: KaneVan Studio</p>
 
@@ -28,8 +28,12 @@ Developer: KaneVan Studio</p>
 <p>When you use the Wi-Fi analysis feature, the app reads Wi-Fi scan results from the Android system. These include the network name (SSID), access point identifier (BSSID), signal strength, frequency, channel, channel width and security type of nearby access points, plus the same details and the link speed of the Wi-Fi network you are connected to. On Android 11 and later, the app also reads the load and capabilities that access points declare in the scan results (for example connected device count, channel utilization, spatial streams, and declarations such as roaming, PMF and WPS).</p>
 <p>This information is only shown on screen and used on the device to compute the channel chart and channel suggestions. The app does not save it to storage and does not transmit it anywhere. It is not kept after you leave the screen or close the app.</p>
 <p>The only exception is signal spots: the nearby Wi-Fi scan list is never saved automatically. When you tap “Record this spot” and save, Frequlio keeps the location name you enter and the current connection’s signal strength, frequency, band and time in the on-device diagnostic history. It does not include the Wi-Fi name (SSID), access point identifier (BSSID), location coordinates or the list of nearby Wi-Fi networks. If you export the diagnostic history, the file includes the location name.</p>
-<p>AP aliases: only after you tap “Save alias” does Frequlio keep that AP’s BSSID and the alias you give it on the device (up to 50). You can remove them one by one or clear all under Settings → AP aliases; “Clear diagnostic history” does not remove aliases. “Hide BSSID” controls what is shown on screen; saved aliases keep working. Aliases are never written to the diagnostic history, signal spots or exports, and are not sent anywhere.</p>
-<p>Scan snapshot export: only after you tap “Export this scan” and choose a location in the system file picker does Frequlio write the scan list from that moment (names, signal strength, frequency, channel, security type and so on of nearby Wi-Fi networks; without BSSIDs when “Hide BSSID” is on; never including AP aliases) to the CSV or TXT file you specify. The app keeps no copy of its own. The file includes other people’s network names, so check it before sharing; it is yours to manage, and clearing Frequlio’s data or uninstalling does not delete it.</p>
+<p>AP aliases: only after you tap “Save alias” does Frequlio keep that AP’s BSSID and the alias you give it on the device (up to 50). You can remove them one by one or clear all under Settings → AP aliases; “Clear diagnostic history” does not remove aliases. “Hide Wi-Fi and Bluetooth addresses” controls what is shown on screen; saved aliases keep working. Aliases are never written to the diagnostic history, signal spots or exports, and are not sent anywhere.</p>
+<p>Scan snapshot export: only after you tap “Export this scan” and choose a location in the system file picker does Frequlio write the scan list from that moment (names, signal strength, frequency, channel, security type and so on of nearby Wi-Fi networks; without BSSIDs when “Hide Wi-Fi and Bluetooth addresses” is on; never including AP aliases) to the CSV or TXT file you specify. The app keeps no copy of its own. The file includes other people’s network names, so check it before sharing; it is yours to manage, and clearing Frequlio’s data or uninstalling does not delete it.</p>
+
+<h3>Nearby Bluetooth devices</h3>
+<p>The app scans only when you open Nearby Bluetooth devices and tap Start scan or Start search. BLE advertising mode reads the name (if any), Bluetooth address, signal strength and company ID from nearby devices’ advertisements; Device search mode uses Android’s Bluetooth discovery to read the name, address, device category and signal strength of devices that are currently discoverable.</p>
+<p>This information is only shown on screen and kept in memory so you can review the current round. It is not written to the diagnostic history, cannot be shared or exported, and is not sent anywhere. It is cleared when you leave the tool, and scanning stops when the app goes to the background or you leave the tool. The app does not connect to or pair with any device, and does not turn Bluetooth on or off. When “Hide Wi-Fi and Bluetooth addresses” is on, Bluetooth addresses are not shown.</p>
 
 <h3>Current network details</h3>
 <p>The home screen shows details that Android provides about your current network: connection type, the system’s connectivity validation status, IP addresses, DNS servers, default gateway, network interface name, search domains and MTU. These are only shown on screen. They are not saved or transmitted.</p>
@@ -40,12 +44,13 @@ Developer: KaneVan Studio</p>
 <p>For HTTP/HTTPS, only the scheme, host and port of the URL are saved; the path and the query string (the part after <code>?</code>) are removed, because either may contain tokens. Raw error messages reported by the system are not saved.</p>
 
 <h3>App settings</h3>
-<p>Your chosen theme mode (follow system, light or dark), app language (follow system, Traditional Chinese or English) and Wi-Fi page display settings (hide BSSID, hide weak networks) are stored on the device.</p>
+<p>Your chosen theme mode (follow system, light or dark), app language (follow system, Traditional Chinese or English) and Wi-Fi page display settings (hide Wi-Fi and Bluetooth addresses, hide weak networks) are stored on the device.</p>
 
 <h2>2. Location permission</h2>
 <p>Android requires an app to hold the precise location permission, and requires the device’s location service to be turned on, before the app can read the list of nearby Wi-Fi networks. Android requires this because nearby Wi-Fi information can technically be used to estimate where a device is.</p>
 <p>Frequlio uses this permission only to read Wi-Fi scan results. The app does not request your location coordinates from the system, does not derive, store or transmit your location, and does not use the permission in the background.</p>
 <p>The app asks for this permission only when you open the Wi-Fi analysis screen and tap the button to grant it. The other features work without it. You can revoke the permission at any time in Android’s system settings.</p>
+<p>Nearby Bluetooth devices: on Android 12 and later this uses the Nearby devices permission, which the app declares is not used to derive location from scan results (so the system may filter out some Bluetooth beacons). On Android 6 to 11, the system requires the location permission above, with location turned on, for Bluetooth scans as well. The app asks only when you first tap Start scan or Start search, does not use it to derive, store or transmit your location, and does not use it in the background.</p>
 
 <h2>3. Network requests the app makes</h2>
 <p>The app makes network requests only when you run a diagnostic yourself:</p>
