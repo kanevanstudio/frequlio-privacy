@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="index.html" lang="zh-Hant-TW">繁體中文</a></p>
 <h1>Frequlio Privacy Policy</h1>
-<p class="meta">Effective date: November 24, 2026<br>
+<p class="meta">Effective date: November 25, 2026<br>
 Applies to: the Android app “Frequlio” (package name <code>com.frequlio.wifitools</code>)<br>
 Developer: KaneVan Studio</p>
 
@@ -38,6 +38,7 @@ Developer: KaneVan Studio</p>
 <h3>Devices on this network</h3>
 <p>Only when you open Devices on this network and tap Start scan does the app scan the Wi-Fi you are connected to: it sends ping, mDNS and UPnP (SSDP) requests to addresses on that network, reads device descriptions (name, manufacturer, model reported by the device itself) only from addresses on that network, and asks this Wi-Fi’s local DNS server for the names of the addresses it found. Names are not looked up if Private DNS is set to a specific provider or the DNS server cannot be confirmed to be on the local network; the app cannot control whether your router forwards these queries. Only if you tap the supplemental scan does it try a few common ports on the remaining addresses. The app cannot obtain other devices’ MAC addresses.</p>
 <p>Results are only shown on screen and kept in memory so you can review the current round. They are not written to the diagnostic history, cannot be shared or exported, and are not sent to the developer or anywhere else. They are cleared when you leave the tool, and scanning stops when the app goes to the background, you leave the tool, or the Wi-Fi changes. This feature needs no additional permission.</p>
+<p>Device labels: only after you tap “Save label” does Frequlio keep the label you give a device on the device (up to 100), together with what is used to recognize that device in a later scan: one of its UPnP identifier, mDNS service name or DNS name, plus, for name-based labels, the UPnP identifier of the network’s router. You can remove them one by one or clear all under Settings → Device labels; “Clear diagnostic history” does not remove labels. Labels are never written to the diagnostic history or exports, and are not sent anywhere.</p>
 
 <h3>Current network details</h3>
 <p>The home screen shows details that Android provides about your current network: connection type, the system’s connectivity validation status, IP addresses, DNS servers, default gateway, network interface name, search domains and MTU. These are only shown on screen. They are not saved or transmitted.</p>
