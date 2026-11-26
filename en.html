@@ -64,7 +64,7 @@ Developer: KaneVan Studio</p>
 <p>The app makes network requests only when you run a diagnostic yourself:</p>
 <ul>
 <li>Ping: sends ICMP echo request packets to the host or IP address you enter and waits for replies.</li>
-<li>MTU probe: sends a series of ICMP echo request packets of different sizes (up to 1,500 bytes) with fragmentation disabled to the target you enter and waits for replies. The record keeps only the summary (for example the confirmed size), not each probe.</li>
+<li>MTU probe: sends a series of echo request packets of different sizes (up to 1,500 bytes; ICMP for IPv4, ICMPv6 for IPv6) with fragmentation disabled to the target you enter and waits for replies. The record keeps only the summary (for example the confirmed size), not each probe.</li>
 <li>Continuous Monitor: for each target you add (up to 5), sends one ICMP echo packet or makes one TCP connection every second until you stop it, for up to 30 minutes. It runs only while the app is open and this screen is shown.</li>
 <li>Traceroute: sends ICMP echo packets with an increasing time-to-live (TTL) to the target you enter; each router along the path may see them and report back. The record keeps the addresses of the routers that reported. On Android 11 and earlier, the same packets are sent through the system’s built-in ping command. On Android 10 and later, by default the app also asks the DNS servers of the network used for the test for the names of these router addresses (you can turn off “Look up host names” on the Traceroute screen); any names found are kept together with the addresses.</li>
 <li>TCP connection test: opens a TCP connection to the host and port you enter, then closes it.</li>
