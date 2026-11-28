@@ -77,6 +77,7 @@ Developer: KaneVan Studio</p>
 <li>One-tap diagnosis: opens TCP connections to your router (default gateway), then contacts fixed Google test targets: a TCP connection to <code>8.8.8.8</code>, a lookup of <code>connectivitycheck.gstatic.com</code> through the system DNS, and one HTTPS request to <code>https://connectivitycheck.gstatic.com/generate_204</code>. Google can therefore see your IP address; how it handles that information is governed by Google’s privacy policy.</li>
 </ul>
 <p>These requests go to the target you specify, to the fixed targets of the one-tap diagnosis, to the DNS service your network uses, to Google Public DNS when you choose to compare, to Globalping when you use Global Ping, and to Cloudflare when you use STUN public address. As with any network connection, the target service, your network operator or equipment along the path may learn connection information such as your IP address. How they handle it is governed by their own policies and is outside this app’s control.</p>
+<p>Internet speed test: after you tap "Open FAST.com" in the confirmation dialog, Frequlio hands the fixed address <code>https://fast.com/</code> to the system to open (usually in a browser); the address carries no diagnostic data. The test is provided by Netflix; Frequlio does not read or keep the result. How Netflix handles test data is governed by the FAST.com privacy statement.</p>
 <p>Apart from diagnostics that you start, the app does not connect to any server on its own.</p>
 
 <h2>4. Where data is stored and for how long</h2>

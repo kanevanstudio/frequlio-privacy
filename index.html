@@ -77,6 +77,7 @@
 <li>一鍵完整診斷：先與你的路由器（預設閘道）建立 TCP 連線，再連到 Google 的固定測試目標：與 <code>8.8.8.8</code> 建立 TCP 連線、透過系統 DNS 查詢 <code>connectivitycheck.gstatic.com</code>，並對 <code>https://connectivitycheck.gstatic.com/generate_204</code> 送出一次 HTTPS 請求。Google 會因此看到你的 IP 位址；它如何處理這些資訊，依 Google 的隱私權政策而定。</li>
 </ul>
 <p>這些請求的對象是你指定的目標、一鍵完整診斷的固定目標、你的網路所使用的 DNS 服務，你選擇比較時的 Google Public DNS，你使用全球 Ping 時的 Globalping，以及你使用 STUN 出口位址時的 Cloudflare。如同任何網路連線，目標服務、你的網路業者或中間的網路設備，可能因此得知你的 IP 位址等連線資訊；它們如何處理這些資訊，依各自的政策而定，不在本 App 的控制範圍內。</p>
+<p>網際網路測速：在確認視窗按下「開啟 FAST.com」後，Frequlio 會把固定網址 <code>https://fast.com/</code> 交給系統開啟（通常是瀏覽器），網址不帶任何診斷資料。測試由 Netflix 提供，Frequlio 不會讀取或保存測速結果；Netflix 如何處理測試資料，依 FAST.com 的隱私聲明而定。</p>
 <p>除了你主動執行的診斷之外，App 不會自行連線到任何伺服器。</p>
 
 <h2>4. 資料保存在哪裡、保存多久</h2>
