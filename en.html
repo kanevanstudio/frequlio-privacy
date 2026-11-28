@@ -10,7 +10,7 @@
 <main>
 <p class="lang"><a href="index.html" lang="zh-Hant-TW">繁體中文</a></p>
 <h1>Frequlio Privacy Policy</h1>
-<p class="meta">Effective date: November 26, 2026<br>
+<p class="meta">Effective date: November 28, 2026<br>
 Applies to: the Android app “Frequlio” (package name <code>com.frequlio.wifitools</code>)<br>
 Developer: KaneVan Studio</p>
 
@@ -41,6 +41,7 @@ Developer: KaneVan Studio</p>
 <p>Upstream address translation check (in the STUN public address tool): when you run the check manually, Frequlio asks your router for its WAN IPv4 on the local network (UPnP), gets this connection’s public address from Cloudflare STUN, and compares the two on your phone. The query goes only to the current Wi-Fi’s default gateway. The result is not written to the diagnostic history and is cleared when you leave the tool.</p>
 <p>Port check: when you run a check manually, Frequlio tries to open TCP connections from this phone to the local device you chose (only on the current Wi-Fi’s subnet), without sending data. Results stay in the phone’s memory: they are not written to the diagnostic history, cannot be shared or exported, and are not sent to the developer or anywhere else. They are cleared when you leave the tool.</p>
 <p>Wake-on-LAN: when you use Wake-on-LAN, Frequlio sends a wake packet over the current Wi-Fi. If you choose to save a device, its name, MAC address and port are kept only on this device and can be deleted at any time. They are not written to the diagnostic history or exported, and are not sent to the developer or anywhere else.</p>
+<p>iPerf3 speed test (local): test traffic goes directly between your phone and the server you specify, never through the developer. Frequlio remembers the address and port of the last server that worked, on this device only (tap Forget server to delete it). Test results are kept only while the tool screen is open and are not written to the diagnostic history or exported.</p>
 <p>Device labels: only after you tap “Save label” does Frequlio keep the label you give a device on the device (up to 100), together with what is used to recognize that device in a later scan: one of its UPnP identifier, mDNS service name or DNS name, plus, for name-based labels, the UPnP identifier of the network’s router. You can remove them one by one or clear all under Settings → Device labels; “Clear diagnostic history” does not remove labels. Labels are never written to the diagnostic history or exports, and are not sent anywhere.</p>
 
 <h3>Current network details</h3>
